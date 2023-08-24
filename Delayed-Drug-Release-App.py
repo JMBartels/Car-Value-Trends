@@ -7,7 +7,6 @@ Created 2023
 
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
 from dash import Dash, html, Input, Output, dcc
 import dash_daq as daq
 import plotly.graph_objects as go
