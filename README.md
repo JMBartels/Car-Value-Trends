@@ -8,7 +8,7 @@ Python + Chemistry to model and optimize polymer-mediated drug delivery designs
 * plots of active drug concentration
 
 ## [Part 2 : Interactive Dashboard](https://delayed-drug-release-app.onrender.com)
-* using Plotly Dash
+* Interactive data visualization using Plotly Dash
 * try making a membrane that is "just right"
 
 ![](https://github.com/JMBartels/Delayed-Drug-Release/blob/main/images/example_plot.png)
