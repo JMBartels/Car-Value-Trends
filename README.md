@@ -2,7 +2,7 @@
 Python + Chemistry to model and optimize polymer-mediated drug delivery designs
 
 ## Part 1 : The System
-<img src="https://github.com/JMBartels/Delayed-Drug-Release/blob/9fdde8c70e72d326a2a1a92e1876324162e5150b/images/Film%20Design.jpg" alt="hi" class="inline"/>
+![Membrane use design](/images/Film%20Design.jpg)
 * the problem and design
 * equations and explanation
 * plots of active drug concentration
