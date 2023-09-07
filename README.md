@@ -1,4 +1,4 @@
-# Delayed-Drug-Release
+# Delayed-Drug-Release (by [Josh Bartels](https://www.linkedin.com/in/joshua-bartels-756309138/))
 Python + Chemistry to model and optimize polymer-mediated drug delivery designs
 
 ## Part 1 : The System
