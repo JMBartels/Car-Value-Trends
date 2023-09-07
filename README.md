@@ -11,4 +11,4 @@ Python + Chemistry to model and optimize polymer-mediated drug delivery designs
 * Interactive data visualization using Plotly Dash
 * try making a membrane that is "just right"
 
-![Example plot](/images/example_plot.png)
+![Example plot](/Delayed-Drug-Release/images/example_plot.png)
