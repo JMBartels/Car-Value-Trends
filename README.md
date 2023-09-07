@@ -2,7 +2,7 @@
 Python + Chemistry to model and optimize polymer-mediated drug delivery designs
 
 ## Part 1 : The System
-![Membrane use design](/images/Film%20Design.jpg)
+![Membrane-use-design](/images/Film%20Design.jpg)
 * the problem and design
 * equations and explanation
 * plots of active drug concentration
