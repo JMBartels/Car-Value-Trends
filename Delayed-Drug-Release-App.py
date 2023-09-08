@@ -63,6 +63,7 @@ def ConcProfile(MW, th_init, conc):
 #Interactive Dashboard that recalculates and plots ConcProfile
 # ___MAIN___
 app = Dash(__name__)
+server = app.server
 
 app.layout = html.Div([
     html.Div(children=[
