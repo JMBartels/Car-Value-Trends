@@ -13,7 +13,7 @@
 
 # [Part 2 : Interactive Dashboard](https://delayed-drug-release-app.onrender.com)
 
-<img src="/images/example_plot2.png" width="500">
+<img src="/images/example_plot2.png" style="width: 500px;">
 
 - Interactive data visualization using Plotly Dash
 - Try making a membrane that is "just right"
