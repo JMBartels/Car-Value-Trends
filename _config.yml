@@ -1,8 +1,8 @@
-title: Delayed Drug Release Project
+title: Delayed Drug Release App
 # logo: /images/Film_Design.jpg
 description: Python + Chemistry to model and optimize polymer-mediated drug delivery designs
 #show_downloads: true
-#theme: jekyll-theme-minimal
-remote_theme: pages-themes/cayman@v0.2.0
-plugins:
-- jekyll-remote-theme # add this line to the plugins list if you already have one
+theme: jekyll-theme-cayman
+# remote_theme: pages-themes/cayman@v0.2.0
+# plugins:
+# - jekyll-remote-theme # add this line to the plugins list if you already have one
