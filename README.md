@@ -28,10 +28,10 @@ Delayed Drug Release App
    <img src="./images/C_eqn.png" width = 200>  
   </p>
     Where C is the current concentration, C0 is the initial concentration, dt is the time passed, and t1/2 is the half-life.  Notice that a higher drug concentrations will result in a sharper decay in active concentration. There are two competing effects, linear drug introduction and non-linear deactivation/removal.  Since the drug is continually introduced through film dissolution, there is no constant rate of decay and we must continually recalculate the decay rate with the current concentration.
-- Initial plots of active drug concentration vs. time for three different molecular weights and a constant thickness:
+- Initial plots of active drug concentration vs. time for three different molecular weights and a constant thickness:  
  <p align="center">
   <img src="./images/Active_Dose_plot.png" width = 500>
- </p>
+ </p>  
     With the inclusion of drug lifetime there is a dramatic difference in the safety and effectiveness of these three film designs.  The lowest molecular weight film (blue) delivers the drug too quickly and crosses our safety threshold, while the highest molecular weight (green) sits dangerously close to the minimum effective dose (MED).  Although close to the MED, we observe a desirable feature of an extended plateau in the case of the highest molecular weight modelled. <p>&nbsp;</p>  
 
 # Part 2 : Interactive Dashboard [@render](https://delayed-drug-release-app.onrender.com) [@github](https://github.com/JMBartels/Delayed-Drug-Release/blob/main/Delayed-Drug-Release-App.py)
@@ -43,16 +43,16 @@ Delayed Drug Release App
 - The next goal is to design a membrane that has a plateau between MED and MSC and a duration around 15 days.
 - Guess-and-check is far too slow for this so instead we build an interactive plot in Python with Plotly/Dash to explore designs intuitively with knobs that dynamically set our membrane design variables.
 - Follow the link to run the web-deployed app on Render or use the github repo to run it on your machine.
-<span style="color:red">
-- NOTE: the Render server is slow and will take a minute to load and 10-15 seconds to recalculate after you turn a knob, please be patient!
-</span>  
+- <span style="color:red"> NOTE: the Render server is slow and will take a minute to load and 10-15 seconds to recalculate after you turn a knob, please be patient! </span>  
   <p>&nbsp;</p>
 
 
-# Part 3 : Machine Learning
+# Part 3 : Machine Learning [@github]()
 
+<p align="center">
  <img src="./images/SimFIlm_actual_vs_pred.png" width="500">
- 
+</p> 
+
 - This system offers a complex relationship between the input variables (MW, thickness, drug concentration) and the performance metrics (is it safe, time to activate, active drug duration), and offers a rich platform for machine learning to analyze
 - Simulate a database of membrane performance
 - Build a neural network with Tensorflow and scikit-learn and train on the database
