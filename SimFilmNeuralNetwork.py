@@ -93,7 +93,7 @@ for i in range(num_samples):
         temp_result = np.array([temp_is_safe, temp_time_to_active, temp_time_spent_active])
         targets.append(temp_result)
     else:
-        pass
+        pass #skip non-physical samples
 
 
 ######
@@ -114,7 +114,8 @@ def make_network(features,targets):
 
     scaler = preprocessing.StandardScaler()
     corrected_features_array = scaler.fit_transform(corrected_features_array)
-
+    
+#split data into training set and network evaluation testing set randomly (25% for testing)
     features_train, features_test, target_train, target_test = train_test_split(corrected_features_array,
                                                                                target_array,
                                                                                test_size=0.25,
@@ -181,7 +182,6 @@ def make_network(features,targets):
     ax.plot(target_test, predicted_target,'r.')
     ax.plot([min(targets)-5,max(targets)+5],[min(targets)-5,max(targets)+5],color='gray', linestyle='dashed')
 
-    # ax.set(xlim=(0,0.05), ylim=(0,0.05))
     plt.xlabel("Actual Values")
     plt.ylabel("Predicted Values")
     plt.show()
