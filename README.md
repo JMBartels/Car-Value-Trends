@@ -105,7 +105,7 @@ def make_network(features,targets):
 Overall, we were able to take basic chemistry principles and develop a model in python to explore drug release mediated by drug design.  We have an interactive dashboard available on the web that allows the user to key into their desired performance through intuitive exploration. Finally, we simulated a large number of membrane designs and trained a neural network to predict the performance metrics from membrane design. 
 
 <p>&nbsp;</p>
-<span style="color:gray;font-size=10px">
-This project was conceived and coded by me, Josh Bartels
+<span style="color:gray;font-size=8px">
+This project was conceived and coded by me (Josh Bartels), I hope you enjoyed it!
 </span>  
 
