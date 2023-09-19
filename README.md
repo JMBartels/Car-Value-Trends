@@ -5,10 +5,10 @@ Delayed Drug Release App
 ## by Josh Bartels [@linkedin](https://www.linkedin.com/in/joshua-bartels-756309138/)
 
 # Overview / Goals
--  [X] Simulate and visualize drug release mediated through polymer dissolution. 
--	 [X] Explore the nonlinear relationship between film design and active drug concentration. 
--	 [X] Identify “just right” designs where active concentration is never too high for safety nor too low for effectiveness.
--	 [X] Build machine learning architecture trained on simulated data to predict key membrane performance metrics
+- [X]  Simulate and visualize drug release mediated through polymer dissolution. 
+-	[X]  Explore the nonlinear relationship between film design and active drug concentration. 
+-	[X]  Identify “just right” designs where active concentration is never too high for safety nor too low for effectiveness.
+-	[X]  Build machine learning architecture trained on simulated data to predict key membrane performance metrics
  
 # Part 1 : Modelling the System
   <p align="center">
@@ -31,11 +31,11 @@ Delayed Drug Release App
   <p align="center">
    <img src="./images/Rd_eqn.png" width = 150>  
   </p>
-    Where Rd is the rate of dissolution, k is a rate constant we set to an arbitrary yet reasonable value, and Mw is the polymer molecular weight. The drug is not infinitely stable and either becomes inactive or eliminated from the body so that the active concentration will decay with a half-life:  
+ Where Rd is the rate of dissolution, k is a rate constant we set to an arbitrary yet reasonable value, and Mw is the polymer molecular weight. The drug is not infinitely stable and either becomes inactive or eliminated from the body so that the active concentration will decay with a half-life:  
   <p align="center">
    <img src="./images/C_eqn.png" width = 150>  
   </p>
-    Where C is the current concentration, C0 is the initial concentration, dt is the time passed, and t1/2 is the half-life.  Notice that a higher drug concentrations will result in a sharper decay in active concentration. There are two competing effects, linear drug introduction and non-linear deactivation/removal.  Since the drug is continually introduced through film dissolution, there is no constant rate of decay and we must continually recalculate the decay rate with the current concentration.  
+ Where C is the current concentration, C0 is the initial concentration, dt is the time passed, and t1/2 is the half-life.  Notice that a higher drug concentrations will result in a sharper decay in active concentration. There are two competing effects, linear drug introduction and non-linear deactivation/removal.  Since the drug is continually introduced through film dissolution, there is no constant rate of decay and we must continually recalculate the decay rate with the current concentration.  
     
 ### **Initial plots:**  
 Active drug concentration vs. time for three different molecular weights and a constant thickness
@@ -53,8 +53,9 @@ Active drug concentration vs. time for three different molecular weights and a c
  
 - The next goal is to design a membrane that has a plateau between MED and MSC and a duration around 15 days.
 - Lets build an interactive simulation dashboard in Python with Plotly/Dash to explore designs intuitively with knobs that dynamically set our design variables.
-- Follow the link to run the web-deployed app on Render or use the github repo to run it on your machine.  
-<span style="color:red"> NOTE: the Render server is slow and will take a minute to load and 10-15 seconds to recalculate after you turn a knob, please be patient! </span>  
+- Follow the link to run the web-deployed app on Render or use the github repo to run it on your machine.
+
+<span style="color:red"> NOTE: the Render server is slow and will take a minute or two to load and 10-15 seconds to recalculate after you turn a knob, please be patient! </span> 
   <p>&nbsp;</p>
 
 
@@ -67,7 +68,38 @@ Active drug concentration vs. time for three different molecular weights and a c
 - This system offers a complex relationship between the three input variables (MW, thickness, drug concentration) and the three performance metrics (is it safe, time to activate, active drug duration), and offers a rich platform for machine learning to model
 - Simulate a database of membrane performance
 - Build a neural network with Tensorflow and scikit-learn trained on the simulated database
-- Visualize the ability of the model to predict active drug duration
+- Visualize the ability of the model to predict active drug duration  
+
+```python 
+def make_network(features,targets):
+    np.random.seed(42)
+    n_epochs = 64
+    scaler = preprocessing.StandardScaler()
+    corrected_features_array = scaler.fit_transform(corrected_features_array)
+
+    features_train, features_test, target_train, target_test = train_test_split(corrected_features_array,
+                                                                               target_array,
+                                                                               test_size=0.25,
+                                                                               random_state=22)
+    network = tf.keras.Sequential()
+    network.add(tf.keras.Input(shape=features_train.shape[1],))
+    network.add(tf.keras.layers.Dense(units=32,
+                            activation="relu",
+                            kernel_regularizer=tf.keras.regularizers.l2(0.01)))
+
+    network.add(tf.keras.layers.Dense(units=16, activation="relu", kernel_regularizer=tf.keras.regularizers.l2(0.01),))
+
+    network.add(tf.keras.layers.Dense(units=1))
+
+    network.compile(loss="mse",optimizer="RMSprop",metrics=["mse"])
+
+    history = network.fit(features_train, target_train,epochs=n_epochs,verbose=0,
+                         batch_size=100,
+                         validation_data=(features_test, target_test))
+
+    training_loss = history.history["loss"]
+    test_loss = history.history["val_loss"]
+```
 
 # Wrap-up:
 Overall, we were able to take basic chemistry principles and develop a model in python to explore drug release mediated by drug design.  We have an interactive dashboard available on the web that allows the user to key into their desired performance through intuitive exploration. Finally, we simulated a large number of membrane designs and trained a neural network to predict the performance metrics from membrane design. 
