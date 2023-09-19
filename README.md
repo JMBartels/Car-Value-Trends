@@ -2,13 +2,13 @@
 Delayed Drug Release App
 </span>  
 
-## by Josh Bartels [@linkedin](https://www.linkedin.com/in/joshua-bartels-756309138/)
+## by Josh Bartels [@Linkedin](https://www.linkedin.com/in/joshua-bartels-756309138/)
 
 # Overview / Goals
-- [X]  Simulate and visualize drug release mediated through polymer dissolution. 
--	[X]  Explore the nonlinear relationship between film design and active drug concentration. 
--	[X]  Identify “just right” designs where active concentration is never too high for safety nor too low for effectiveness.
--	[X]  Build machine learning architecture trained on simulated data to predict key membrane performance metrics
+- Simulate and visualize drug release mediated through polymer dissolution. 
+-	Explore the nonlinear relationship between film design and active drug concentration. 
+-	Identify “just right” designs where active concentration is never too high for safety nor too low for effectiveness.
+-	Build machine learning architecture trained on simulated data to predict key membrane performance metrics
  
 # Part 1 : Modelling the System
   <p align="center">
@@ -24,7 +24,7 @@ Delayed Drug Release App
 ### **Effects to include:**  
 - During dissolution, polymer film thickness decreases linearly with time
 - Increasing molecular weight gives a nonlinear delay to dissolution time
-- Half-life equation describes how a drug is eliminated from the body, and depends on the active concentration
+- The half-life equation describes a drug's elimination rate, and depends on the active concentration
   
 ### **Description**
    The length of the polymer chain (its molecular weight) has a non-linear effect on rate of polymer dissolution.  Longer polymer chains become more entangled, resulting in delayed dissolution. A great resource on this by Bae Soo Kong, Yong Sung Kwon, and Dukjoon Kim can be found at (Polymer Journal, Vol. 29, No. 9, pp 722-732 (1997); https://www.nature.com/articles/pj1997129.pdf).  I borrow a simplified dissolution rate vs molecular weight relationship and omit temperature effects for simplicity:
@@ -106,6 +106,6 @@ Overall, we were able to take basic chemistry principles and develop a model in 
 
 <p>&nbsp;</p>
 <span style="color:gray;font-size=8px">
-This project was conceived and coded by me (Josh Bartels), I hope you enjoyed it!
+This project was conceived and coded solely by me (Josh Bartels), I hope you enjoyed it!
 </span>  
 
