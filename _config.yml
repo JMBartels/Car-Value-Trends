@@ -1,7 +1,6 @@
 title: Delayed Drug Release App
 # logo: /images/Film_Design.jpg
-description: Python + Chemistry to model and optimize polymer-mediated drug delivery designs  
- (using Pandas, Numpy, Dash, TensorFlow, and scikit-learn libraries)
+description: Python + Chemistry to model and optimize polymer-mediated drug delivery designs
 #show_downloads: true
 theme: jekyll-theme-cayman
 # remote_theme: pages-themes/cayman@v0.2.0
