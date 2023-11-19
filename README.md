@@ -54,7 +54,7 @@ Active drug concentration vs. time for three different molecular weights and a c
  
 - The next goal is to design a membrane that has a plateau between MED and MSC and a duration around 15 days.
 - Lets build an interactive simulation dashboard in Python with Plotly/Dash to explore designs intuitively with knobs that dynamically set our design variables.
-- Follow the link to run the web-deployed app on Render or use the github repo to run it on your machine.
+- Follow the link to run the interactive web-deployed app on Render or use the github repo to run it on your machine.
 
 <span style="color:red"> NOTE: the Render server is slow and will take a minute or two to load and 10-15 seconds to recalculate after you turn a knob, please be patient! </span> 
   <p>&nbsp;</p>
@@ -63,14 +63,15 @@ Active drug concentration vs. time for three different molecular weights and a c
 # Part 3 : Machine Learning [@github](https://github.com/JMBartels/Delayed-Drug-Release/blob/main/SimFilmNeuralNetwork.py)
 
 <p align="center">
- <img src="./images/SimFIlm_actual_vs_pred.png" width="600">
+ <img src="./images/SimFIlm_actual_vs_pred_v2.png" width="600">
 </p> 
 
 - This system offers a complex relationship between the three input variables (MW, thickness, drug concentration) and the three performance metrics (is it safe, time to activate, active drug duration), and offers a rich platform for machine learning to model
-- Simulate a database of membrane performance
-- Build a neural network with Tensorflow and scikit-learn trained on the simulated database
+- Simulate a database of membrane performance for 1,000 random possible designs
+- Build a Neural Network with Tensorflow and scikit-learn trained on the simulated database
 - Visualize the ability of the model to predict active drug duration  
 
+Below is the function that takes the simulated database and builds/fits a neural network to predict active drug time from membrane design
 ```python 
 def make_network(features,targets):
     np.random.seed(42)
@@ -101,6 +102,20 @@ def make_network(features,targets):
     training_loss = history.history["loss"]
     test_loss = history.history["val_loss"]
 ```
+
+<p align="center">
+ <img src="./images/Loss_vs_epoch.png" width="600">
+</p> 
+
+- The model starts with very poor accuracy but improves significantly after 10 iterations (epochs) through the data
+- This plot, at first glance, indicates sufficient fitting at 10 epochs, however the initial fits have such high loss that we cannot tell the fit quality beyond 10 epochs
+- Lets look at the difference between the training loss and test loss to see if and when we get to high quality fits
+
+ <p align="center">
+ <img src="./images/LossDiff_vs_epoch-c.jpg" width="600">
+</p> 
+
+- Here we can see the model reaches our desired quality around 30 epochs and does not extend into the over-fitting regime 
 
 # Wrap-up:
 Overall, we were able to take basic chemistry principles and develop a model in python to explore drug release mediated by drug design.  We have an interactive dashboard available on the web that allows the user to key into their desired performance through intuitive exploration. Finally, we simulated a large number of membrane designs and trained a neural network to predict the performance metrics from membrane design. 
