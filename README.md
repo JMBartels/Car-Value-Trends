@@ -49,7 +49,7 @@ Active drug concentration vs. time for three different molecular weights and a c
 # Part 2 : Interactive Dashboard [@render](https://delayed-drug-release-app.onrender.com) [@github](https://github.com/JMBartels/Delayed-Drug-Release/blob/main/Delayed-Drug-Release-App.py)
 
  <p align="center">
-  <img src="./images/example_plot2.png" style="width: 600px;">
+  <img src="./images/example_plot2.png" style="width: 800px;">
  </p>  
  
 - The next goal is to design a membrane that has a plateau between MED and MSC and a duration around 15 days.
