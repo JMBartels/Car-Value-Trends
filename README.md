@@ -53,7 +53,6 @@ Active drug concentration vs. time for three different molecular weights and a c
   <object data="filename.html" width="1600" height="4800"></object>
  </p>
  
- 
 - The next goal is to design a membrane that has a plateau between MED and MSC and a duration around 15 days.
 - Lets build an interactive simulation dashboard in Python with Plotly/Dash to explore designs intuitively with knobs that dynamically set our design variables.
 - Follow the link to run the interactive web-deployed app on Render or use the github repo to run it on your machine.
