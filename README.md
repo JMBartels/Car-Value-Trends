@@ -48,11 +48,11 @@ Active drug concentration vs. time for three different molecular weights and a c
 
 # Part 2 : Interactive Dashboard [@render](https://delayed-drug-release-app.onrender.com) [@github](https://github.com/JMBartels/Delayed-Drug-Release/blob/main/Delayed-Drug-Release-App.py)
 
- <!--<p align="center">
+ <p align="center">
   <img src="./images/example_plot2.png" style="width: 800px;">
   <object data="filename.html" width="1600" height="4800"></object>
- </p>-->
- <object data="filename.html"></object>
+ </p>
+ 
  
 - The next goal is to design a membrane that has a plateau between MED and MSC and a duration around 15 days.
 - Lets build an interactive simulation dashboard in Python with Plotly/Dash to explore designs intuitively with knobs that dynamically set our design variables.
