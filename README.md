@@ -51,7 +51,7 @@ Active drug concentration vs. time for three different molecular weights and a c
  <!--<p align="center">
   <img src="./images/example_plot2.png" style="width: 800px;">
   <object data="filename.html" width="1600" height="4800"></object>
- </p>  -->
+ </p>-->
  <object data="filename.html"></object>
  
 - The next goal is to design a membrane that has a plateau between MED and MSC and a duration around 15 days.
