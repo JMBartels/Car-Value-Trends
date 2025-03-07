@@ -60,7 +60,7 @@ Active drug concentration vs. time for three different molecular weights and a c
 [Link to Full Dash App Deployed on Render](https://delayed-drug-release-app.onrender.com)
 
  <p align="center">
-  <img src="./images/example_plot2.png" style="width: 400px border:2px;">
+  <img src="./images/example_plot2.png" style="width: 400px; border:1px solid #ddd;">
  </p>
 
 <span style="color:red"> NOTE: the Render server is slow and will take a minute or two to load and 10-15 seconds to recalculate after you turn a knob, please be patient! </span> 
