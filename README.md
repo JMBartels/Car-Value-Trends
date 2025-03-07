@@ -47,16 +47,21 @@ Active drug concentration vs. time for three different molecular weights and a c
    With the inclusion of drug lifetime there is a dramatic difference in the safety and effectiveness.  The lowest molecular weight film (blue) delivers the drug too quickly and crosses our safety threshold, while the highest molecular weight (green) sits dangerously close to the minimum effective dose (MED).  Although close to the MED, we observe a desirable feature of an extended plateau in the case of the highest molecular weight modelled. <p>&nbsp;</p>  
 
 # Part 2 : Interactive Dashboard [@render](https://delayed-drug-release-app.onrender.com) [@github](https://github.com/JMBartels/Delayed-Drug-Release/blob/main/Delayed-Drug-Release-App.py)
-
- <p align="center">
-  <img src="./images/example_plot2.png" style="width: 800px;">
-  <!--<object data="filename.html" width="1600" height="3200"></object> -->
-  <embed type="text/html" src="activeplot.html" width="600" height="700">
- </p>
  
 - The next goal is to design a membrane that has a plateau between MED and MSC and a duration around 15 days.
 - Lets build an interactive simulation dashboard in Python with Plotly/Dash to explore designs intuitively with knobs that dynamically set our design variables.
+
+ <p align="center">
+  <!--<object data="filename.html" width="1600" height="3200"></object> -->
+  <embed type="text/html" src="activeplot.html" width="600" height="700">
+ </p>
+  
 - Follow the link to run the interactive web-deployed app on Render or use the github repo to run it on your machine.
+
+
+ <p align="center">
+  <img src="./images/example_plot2.png" style="width: 400px;" border="1">
+ </p>
 
 <span style="color:red"> NOTE: the Render server is slow and will take a minute or two to load and 10-15 seconds to recalculate after you turn a knob, please be patient! </span> 
   <p>&nbsp;</p>
