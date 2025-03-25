@@ -1,8 +1,8 @@
 <span style="color:white">
-Delayed Drug Release App
+The Cost of a Mile - Trends in Car Devaluation
 </span>  
 
-Developed using Pandas, Numpy, Dash, TensorFlow, and scikit-learn libraries  
+Developed using Pandas, Numpy, Selenium, and Plotly libraries  
 ## by Josh Bartels [@Linkedin](https://www.linkedin.com/in/joshua-bartels-756309138/)
 
 # Overview / Goals
@@ -16,16 +16,17 @@ Developed using Pandas, Numpy, Dash, TensorFlow, and scikit-learn libraries
    <img src="./images/Film_Design.jpg" width = 600>
   </p>
 
-### **Problem:**  
-> In a delayed release system, there are competing effects governing the active drug concentration preventing it from being predicted simply.
+### **Questions:**  
+> - How much should I spend to fix my old car?
+> - How many miles should I expect to get per $ spent fixing my car?
+> - When should I sell my car?
+> - What cars retain their value best?
 
 ### **Goal:**  
-> Design a polymer coating that safely releases an active small molecule (drug) over a desired range of time.  
+> Collect and analyze real-world data to guide decision-making for my car repairs and purchasing   
 
-### **Effects to include:**  
-- During dissolution, polymer film thickness decreases linearly with time
-- Increasing molecular weight gives a nonlinear delay to dissolution time
-- The half-life equation describes a drug's elimination rate, and depends on the active concentration
+### **Situation:**  
+- I have an old car with +200,000 miles and don't know how much it is *worth* to repair
   
 ### **Description**
    The length of the polymer chain (its molecular weight) has a non-linear effect on rate of polymer dissolution.  Longer polymer chains become more entangled, resulting in delayed dissolution. A great resource on this by Bae Soo Kong, Yong Sung Kwon, and Dukjoon Kim can be found at (Polymer Journal, Vol. 29, No. 9, pp 722-732 (1997); https://www.nature.com/articles/pj1997129.pdf).  I borrow a simplified dissolution rate vs molecular weight relationship and omit temperature effects for simplicity:
