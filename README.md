@@ -6,12 +6,12 @@ Developed using Pandas, Numpy, Selenium, and Plotly libraries
 ## by Josh Bartels [@Linkedin](https://www.linkedin.com/in/joshua-bartels-756309138/)
 
 # Overview / Goals
-- Simulate and visualize drug release mediated through polymer dissolution. 
--	Explore the nonlinear relationship between film design and active drug concentration. 
--	Identify “just right” designs where active concentration is never too high for safety nor too low for effectiveness.
--	Build machine learning architecture trained on simulated data to predict key membrane performance metrics
+- Extract: Build an API to extract real world car prices and mileage
+- Transform: Clean the data to be ready for batch plotting and analysis
+- Load: Store data in a central location that can easily be updated
+- Analyze: Model the data to answer our guiding questions 
  
-# Part 1 : Modelling the System
+# Part 1 : Setting up the Problem
   <p align="center">
    <img src="./images/Film_Design.jpg" width = 600>
   </p>
