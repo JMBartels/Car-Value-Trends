@@ -10,11 +10,6 @@ Developed using Pandas, Numpy, Selenium, and Plotly libraries
 - Transform: Clean the data to be ready for batch plotting and analysis
 - Load: Store data in a central location that can easily be updated
 - Analyze: Model the data to answer our guiding questions 
- 
-# Part 1 : Setting up the Problem
-  <p align="center">
-   <img src="./images/Film_Design.jpg" width = 600>
-  </p>
 
 ### **Questions:**  
 > - How much should I spend to fix my old car?
@@ -22,25 +17,25 @@ Developed using Pandas, Numpy, Selenium, and Plotly libraries
 > - When should I sell my car?
 > - What cars retain their value best?
 
-### **Goal:**  
-> Collect and analyze real-world data to guide decision-making for my car repairs and purchasing   
-
 ### **Situation:**  
-- I have an old car with +200,000 miles and don't know how much it is *worth* to repair
-  
-### **Description**
-   The length of the polymer chain (its molecular weight) has a non-linear effect on rate of polymer dissolution.  Longer polymer chains become more entangled, resulting in delayed dissolution. A great resource on this by Bae Soo Kong, Yong Sung Kwon, and Dukjoon Kim can be found at (Polymer Journal, Vol. 29, No. 9, pp 722-732 (1997); https://www.nature.com/articles/pj1997129.pdf).  I borrow a simplified dissolution rate vs molecular weight relationship and omit temperature effects for simplicity:
-  <p align="center">
-   <img src="./images/Rd_eqn.png" width = 150>  
-  </p>
- Where Rd is the rate of dissolution, k is a rate constant we set to an arbitrary yet reasonable value, and Mw is the polymer molecular weight. The drug is not infinitely stable and either becomes inactive or eliminated from the body so that the active concentration will decay with a half-life:  
-  <p align="center">
-   <img src="./images/C_eqn.png" width = 150>  
-  </p>
- Where C is the current concentration, C0 is the initial concentration, dt is the time passed, and t1/2 is the half-life.  Notice that a higher drug concentrations will result in a sharper decay in active concentration. There are two competing effects, linear drug introduction and non-linear deactivation/removal.  Since the drug is continually introduced through film dissolution, there is no constant rate of decay and we must continually recalculate the decay rate with the current concentration.  
+This is how I see my car, shiny brand new with fine engineering and design:
+ <p align="center">
+  <img src="./images/Active_Dose_plot.png" width = 600>
+ </p>
+however, this is how everyone else sees my car, from 2010 with +200,000 miles and maybe a few dents:
+ <p align="center">
+  <img src="./images/Active_Dose_plot.png" width = 600>
+ </p>
+I drove every mile on this car and love it. I want to keep it as long as I can without making multiple particularly poor economic decisions.
+This raises a real problem, I don't know how much it is *worth* to repair. The first thought is to compare the market price of the car to the cost of a fix, but this suggests it is rarely ever worth fixing.
+The car still *has* to have value since it gets me from place to place (the role of a car). Instead of defining the value by the price of the car, lets define it as the number of miles.
+So then our question becomes: How much is a mile worth on a Mazda3?
+ 
+### **Approach**
+> API 
     
-### **Initial plots:**  
-Active drug concentration vs. time for three different molecular weights and a constant thickness
+### **Extracting Data:**  
+To make an informed decision I need real data to compare costs.
  <p align="center">
   <img src="./images/Active_Dose_plot.png" width = 600>
  </p>
