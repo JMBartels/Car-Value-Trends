@@ -2,7 +2,8 @@
 The Cost of a Mile - Trends in Car Devaluation
 </span>  
 
-Developed using Pandas, Numpy, Selenium, and Plotly libraries  
+Developed using Pandas, Numpy, Selenium, and Plotly libraries
+No AI tools were used in the development and coding of this project
 ## by Josh Bartels [@Linkedin](https://www.linkedin.com/in/joshua-bartels-756309138/)
 
 # Overview / Goals
@@ -32,24 +33,30 @@ The car still *has* to have value since it gets me from place to place (the role
 So then our question becomes: How much is a mile worth on a Mazda3?
  
 ### **Approach**
-> API 
+> Build and API to search and retrieve data from Autotrader
     
 ### **Extracting Data:**  
-To make an informed decision I need real data to compare costs.
+To make an informed decision I need real data to compare costs. We will scrape information from Autotrader in the Boston area using Selenium in Python to control Chrome:
+
+
  <p align="center">
   <img src="./images/Active_Dose_plot.png" width = 600>
  </p>
  
-   With the inclusion of drug lifetime there is a dramatic difference in the safety and effectiveness.  The lowest molecular weight film (blue) delivers the drug too quickly and crosses our safety threshold, while the highest molecular weight (green) sits dangerously close to the minimum effective dose (MED).  Although close to the MED, we observe a desirable feature of an extended plateau in the case of the highest molecular weight modelled. <p>&nbsp;</p>  
+   There are a few key parts of this code: 
+   1. Understanding the syntax for an Autotrader -> how to execute a searc h
+   1. Load in all the data to the web page with page navigation (get around "infinite scrolling")
+   1. Get component information from each listing (Price, Miles, Listing Name) 
+   <p>&nbsp;</p>  
 
-# Part 2 : Interactive Dashboard [@render](https://delayed-drug-release-app.onrender.com) [@github](https://github.com/JMBartels/Delayed-Drug-Release/blob/main/Delayed-Drug-Release-App.py)
+## **Transform/Clean Data:** ## 
  
 - The next goal is to design a membrane that has a plateau between MED and MSC and a duration around 15 days.
 - Lets build an interactive simulation dashboard in Python with Plotly/Dash to explore designs intuitively with knobs that dynamically set our design variables.
 
  <p align="center">
   <!--<object data="filename.html" width="1600" height="3200"></object> -->
-  <embed type="text/html" src="activeplot.html" width="600" height="700">
+  <embed type="text/html" src="Milestogo.html" width="600" height="700">
  </p>
   
 - Follow the link to run the interactive web-deployed app on Render or use the github repo to run it on your machine.
