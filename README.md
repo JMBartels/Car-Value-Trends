@@ -37,16 +37,15 @@ So then our question becomes: How much is a mile worth on a Mazda3?
     
 ### **Extracting Data:**  
 To make an informed decision I need real data to compare costs. We will scrape information from Autotrader in the Boston area using Selenium in Python to control Chrome:
-
-
- <p align="center">
-  <img src="./images/Active_Dose_plot.png" width = 600>
- </p>
  
    There are a few key parts of this code: 
-   1. Understanding the syntax for an Autotrader -> how to execute a searc h
-   1. Load in all the data to the web page with page navigation (get around "infinite scrolling")
-   1. Get component information from each listing (Price, Miles, Listing Name) 
+   1. Understanding the syntax for an Autotrader URL --> how to execute a search
+   1. Get the page to load in all the data using page navigation (get around "infinite scrolling")
+   1. Get component information from each listing (Price, Miles, Listing Name)
+
+ <p align="center">
+  <img src="./images/Mazda3Listings.PNG" width = 500>
+ </p>
    <p>&nbsp;</p>  
 
 ## **Transform/Clean Data:** ## 
