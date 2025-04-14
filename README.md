@@ -3,7 +3,7 @@ The Cost of a Mile - Trends in Car Devaluation
 </span>  
 
 Developed using Pandas, Numpy, Selenium, and Plotly libraries
-No AI tools were used in the development and coding of this project
+ No AI tools were used in the development and coding of this project
 ## by Josh Bartels [@Linkedin](https://www.linkedin.com/in/joshua-bartels-756309138/)
 
 # Overview / Goals
@@ -20,13 +20,17 @@ No AI tools were used in the development and coding of this project
 
 ### **Situation:**  
 This is how I see my car, shiny brand new with fine engineering and design:
+
  <p align="center">
   <img src="./images/Active_Dose_plot.png" width = 600>
  </p>
-however, this is how everyone else sees my car, from 2010 with +200,000 miles and maybe a few dents:
+
+However, this is how everyone else sees my car, from 2010 with +200,000 miles and maybe a few dents:
+
  <p align="center">
   <img src="./images/Active_Dose_plot.png" width = 600>
  </p>
+
 I drove every mile on this car and love it. I want to keep it as long as I can without making multiple particularly poor economic decisions.
 This raises a real problem, I don't know how much it is *worth* to repair. The first thought is to compare the market price of the car to the cost of a fix, but this suggests it is rarely ever worth fixing.
 The car still *has* to have value since it gets me from place to place (the role of a car). Instead of defining the value by the price of the car, lets define it as the number of miles.
@@ -35,7 +39,7 @@ So then our question becomes: How much is a mile worth on a Mazda3?
 ### **Approach**
 > Build and API to search and retrieve data from Autotrader
     
-### **Extracting Data:**  
+# **Extracting Data:**  
 To make an informed decision I need real data to compare costs. We will scrape information from Autotrader in the Boston area using Selenium in Python to control Chrome:
  
    There are a few key parts of this code: 
@@ -48,7 +52,7 @@ To make an informed decision I need real data to compare costs. We will scrape i
  </p>
    <p>&nbsp;</p>  
 
-## **Transform/Clean Data:** ## 
+# **Transform/Clean Data:**
  
 - The next goal is to design a membrane that has a plateau between MED and MSC and a duration around 15 days.
 - Lets build an interactive simulation dashboard in Python with Plotly/Dash to explore designs intuitively with knobs that dynamically set our design variables.
