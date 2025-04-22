@@ -41,15 +41,85 @@ So then our question becomes: How much is a mile worth on a Mazda3?
     
 # **Extracting Data:**  
 To make an informed decision I need real data to compare costs. We will scrape information from Autotrader in the Boston area using Selenium in Python to control Chrome:
+
+ <p align="center">
+  <img src="./images/Mazda3Listings.PNG" width = 500>
+ </p>
  
    There are a few key parts of this code: 
    1. Understanding the syntax for an Autotrader URL --> how to execute a search
    1. Get the page to load in all the data using page navigation (get around "infinite scrolling")
    1. Get component information from each listing (Price, Miles, Listing Name)
 
- <p align="center">
-  <img src="./images/Mazda3Listings.PNG" width = 500>
- </p>
+```python
+import pandas as pd
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
+
+criteria = {
+    "postcode": "LS1 2AD",
+    "radius": "50",
+    "year_from": "2010",
+    "year_to": "2014",
+    "price_from": "3000",
+    "price_to": "20000",
+}
+
+cars = [{"make": "Mazda","model": "Mazda3"}]
+    
+url = "https://www.autotrader.com/cars-for-sale/all-cars/" + \
+    f"{car['make']}/" + \
+    f"{car['model']}?" + \
+    f"searchRadius={criteria['radius']}&" + \
+    f"startYear={criteria['year_from']}&" + \
+    f"endYear={criteria['year_to']}&" + \
+    f"numRecords=100&" +\
+    f"zip={criteria['postcode']}"
+
+
+driver.get(url)
+
+print(f"Searching for {car['make']} {car['model']}...")
+
+time.sleep(5) 
+
+source = driver.page_source
+content = BeautifulSoup(source, "html.parser")
+    
+    
+## Scroll down a fraction of the web page to let the autoscroll info load in with 5s loading times##
+driver.execute_script("window.scrollTo(0, document.body.scrollHeight*0.2);")
+time.sleep(5)
+driver.execute_script("window.scrollTo(0, document.body.scrollHeight*0.4);")
+time.sleep(5)
+driver.execute_script("window.scrollTo(0, document.body.scrollHeight*0.6);")
+time.sleep(5)
+driver.execute_script("window.scrollTo(0, document.body.scrollHeight*0.8);")
+time.sleep(5)
+driver.execute_script("window.scrollTo(0, document.body.scrollHeight*0.95);")
+time.sleep(5)
+    
+## With the web page now loaded, find each element, identified by inspecting the webpage html
+prices = driver.find_elements(By.XPATH, '//div[@data-cmp="firstPrice"]')
+miles = driver.find_elements(By.XPATH, '//div[@data-cmp="mileageSpecification"]')
+fullname = driver.find_elements(By.XPATH, '//h2[@aria-level="3"]')
+
+## Extract the text of each element into a list
+price_list = []
+for p in range(len(prices)):
+    price_list.append(prices[p].text)
+
+miles_list = []
+for m in range(len(miles)):
+    miles_list.append(miles[m].text)
+    
+fullname_list = []
+for n in range(len(fullname)):
+    fullname_list.append(fullname[n].text)
+```
+
    <p>&nbsp;</p>  
 
  <p align="center">
@@ -78,10 +148,6 @@ To make an informed decision I need real data to compare costs. We will scrape i
 
 
 # Part 3 : Machine Learning [@github](https://github.com/JMBartels/Delayed-Drug-Release/blob/main/SimFilmNeuralNetwork.py)
-
-<p align="center">
- <img src="./images/SimFIlm_actual_vs_pred_v2.png" width="600">
-</p> 
 
 - This system offers a complex relationship between the three input variables (MW, thickness, drug concentration) and the three performance metrics (is it safe, time to activate, active drug duration), and offers a rich platform for machine learning to model
 - Simulate a database of membrane performance for 1,000 random possible designs
@@ -124,18 +190,12 @@ def make_network(features,targets):
  <img src="./images/Loss_vs_epoch.png" width="600">
 </p> 
 
-- The model starts with very poor accuracy but improves significantly after 10 iterations (epochs) through the data
-- This plot, at first glance, indicates sufficient fitting at 10 epochs, however the initial fits have such high loss that we cannot tell the fit quality beyond 10 epochs
-- Lets look at the difference between the training loss and test loss to see if and when we get to high quality fits
-
- <p align="center">
- <img src="./images/LossDiff_vs_epoch-c.jpg" width="600">
-</p> 
-
-- Here we can see the model reaches our desired quality around 30 epochs and does not extend into the over-fitting regime 
+- Point 1
+- Point two
+- Point thr33
 
 # Wrap-up:
-Overall, we were able to take basic chemistry principles and develop a model in python to explore drug release mediated by drug design.  We have an interactive dashboard available on the web that allows the user to key into their desired performance through intuitive exploration. Finally, we simulated a large number of membrane designs and trained a neural network to predict the performance metrics from membrane design. 
+We obtained a real-world answer to our question: if I spend $2700 fixing my car I should get 21,000 miles before my next major fix, otherwise it is cheaper to be driving a different car.
 
 <p>&nbsp;</p>
 <span style="color:gray;font-size=8px">
