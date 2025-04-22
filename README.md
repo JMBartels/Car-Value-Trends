@@ -52,6 +52,10 @@ To make an informed decision I need real data to compare costs. We will scrape i
  </p>
    <p>&nbsp;</p>  
 
+ <p align="center">
+  <embed type="text/html" src="RawCarsData.html" width="800" height="700">
+ </p>
+
 # **Transform/Clean Data:**
  
 - The next goal is to design a membrane that has a plateau between MED and MSC and a duration around 15 days.
@@ -59,7 +63,7 @@ To make an informed decision I need real data to compare costs. We will scrape i
 
  <p align="center">
   <!--<object data="filename.html" width="1600" height="3200"></object> -->
-  <embed type="text/html" src="Milestogo.html" width="600" height="700">
+  <embed type="text/html" src="Milestogo.html" width="800" height="700">
  </p>
   
 - Follow the link to run the interactive web-deployed app on Render or use the github repo to run it on your machine.
