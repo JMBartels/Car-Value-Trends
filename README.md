@@ -58,17 +58,17 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 
-criteria = {
-    "postcode": "LS1 2AD",
-    "radius": "50",
-    "year_from": "2010",
-    "year_to": "2014",
-    "price_from": "3000",
-    "price_to": "20000",
-}
+## Input your search parameters here ##
+criteria = {"postcode": "02138",
+    "radius": "100",
+    "year_from": "2008",
+    "year_to": "2023",
+    "price_from": "1000",
+    "price_to": "40000"}
 
 cars = [{"make": "Mazda","model": "Mazda3"}]
-    
+
+## Build the search url using Autotrader's  convention ##
 url = "https://www.autotrader.com/cars-for-sale/all-cars/" + \
     f"{car['make']}/" + \
     f"{car['model']}?" + \
@@ -78,16 +78,12 @@ url = "https://www.autotrader.com/cars-for-sale/all-cars/" + \
     f"numRecords=100&" +\
     f"zip={criteria['postcode']}"
 
-
 driver.get(url)
-
 print(f"Searching for {car['make']} {car['model']}...")
-
 time.sleep(5) 
 
 source = driver.page_source
-content = BeautifulSoup(source, "html.parser")
-    
+content = BeautifulSoup(source, "html.parser")   
     
 ## Scroll down a fraction of the web page to let the autoscroll info load in with 5s loading times##
 driver.execute_script("window.scrollTo(0, document.body.scrollHeight*0.2);")
