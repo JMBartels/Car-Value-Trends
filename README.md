@@ -123,7 +123,7 @@ for n in range(len(fullname)):
    <p>&nbsp;</p>  
 
  <p align="center">
-  <embed type="text/html" src="RawCarsData.html" width="800" height="700">
+  <embed type="text/html" src="RawCarsData.html" width="800" height="800">
  </p>
 
 # **Transform/Clean Data:**
@@ -133,7 +133,7 @@ for n in range(len(fullname)):
 
  <p align="center">
   <!--<object data="filename.html" width="1600" height="3200"></object> -->
-  <embed type="text/html" src="Milestogo.html" width="800" height="700">
+  <embed type="text/html" src="Milestogo.html" width="800" height="800">
  </p>
   
 - Follow the link to run the interactive web-deployed app on Render or use the github repo to run it on your machine.
