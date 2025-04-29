@@ -83,19 +83,12 @@ print(f"Searching for {car['make']} {car['model']}...")
 time.sleep(5) 
 
 source = driver.page_source
-content = BeautifulSoup(source, "html.parser")   
     
-## Scroll down a fraction of the web page to let the autoscroll info load in with 5s loading times##
-driver.execute_script("window.scrollTo(0, document.body.scrollHeight*0.2);")
-time.sleep(5)
-driver.execute_script("window.scrollTo(0, document.body.scrollHeight*0.4);")
-time.sleep(5)
-driver.execute_script("window.scrollTo(0, document.body.scrollHeight*0.6);")
-time.sleep(5)
-driver.execute_script("window.scrollTo(0, document.body.scrollHeight*0.8);")
-time.sleep(5)
-driver.execute_script("window.scrollTo(0, document.body.scrollHeight*0.95);")
-time.sleep(5)
+## Scroll down fractions of the web page to let the autoscroll info load in with 4.8s loading times##
+waitlist = [0.2,0.4,0.6,0.8,0.95]
+for num in waitlist:
+     driver.execute_script(f"window.scrollTo(0, document.body.scrollHeight*{num});")
+     time.sleep(4.8)
     
 ## With the web page now loaded, find each element, identified by inspecting the webpage html
 prices = driver.find_elements(By.XPATH, '//div[@data-cmp="firstPrice"]')
