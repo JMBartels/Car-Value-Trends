@@ -3,7 +3,8 @@ The Cost of a Mile - Trends in Car Devaluation
 </span>  
 
 Developed using Pandas, Numpy, Selenium, and Plotly libraries
- No AI tools were used in the development and coding of this project
+  <p>&nbsp;</p>
+No AI tools were used in the development and coding of this project
 ## by Josh Bartels [@Linkedin](https://www.linkedin.com/in/joshua-bartels-756309138/)
 
 # Overview / Goals
@@ -134,54 +135,7 @@ for n in range(len(fullname)):
 
 <span style="color:red"> NOTE: the Render server is slow and will take a minute or two to load and 10-15 seconds to recalculate after you turn a knob, please be patient! </span> 
   <p>&nbsp;</p>
-
-
-# Part 3 : Machine Learning [@github](https://github.com/JMBartels/Delayed-Drug-Release/blob/main/SimFilmNeuralNetwork.py)
-
-- This system offers a complex relationship between the three input variables (MW, thickness, drug concentration) and the three performance metrics (is it safe, time to activate, active drug duration), and offers a rich platform for machine learning to model
-- Simulate a database of membrane performance for 1,000 random possible designs
-- Build a Neural Network with Tensorflow and scikit-learn trained on the simulated database
-- Visualize the ability of the model to predict active drug duration  
-
-Below is the function that takes the simulated database and builds/fits a neural network to predict active drug time from membrane design
-```python 
-def make_network(features,targets):
-    np.random.seed(42)
-    n_epochs = 64
-    scaler = preprocessing.StandardScaler()
-    corrected_features_array = scaler.fit_transform(corrected_features_array)
-
-    features_train, features_test, target_train, target_test = train_test_split(corrected_features_array,
-                                                                               target_array,
-                                                                               test_size=0.25,
-                                                                               random_state=22)
-    network = tf.keras.Sequential()
-    network.add(tf.keras.Input(shape=features_train.shape[1],))
-    network.add(tf.keras.layers.Dense(units=32,
-                            activation="relu",
-                            kernel_regularizer=tf.keras.regularizers.l2(0.01)))
-
-    network.add(tf.keras.layers.Dense(units=16, activation="relu", kernel_regularizer=tf.keras.regularizers.l2(0.01),))
-
-    network.add(tf.keras.layers.Dense(units=1))
-
-    network.compile(loss="mse",optimizer="RMSprop",metrics=["mse"])
-
-    history = network.fit(features_train, target_train,epochs=n_epochs,verbose=0,
-                         batch_size=100,
-                         validation_data=(features_test, target_test))
-
-    training_loss = history.history["loss"]
-    test_loss = history.history["val_loss"]
-```
-
-<p align="center">
- <img src="./images/Loss_vs_epoch.png" width="600">
-</p> 
-
-- Point 1
-- Point two
-- Point thr33
+  
 
 # Wrap-up:
 We obtained a real-world answer to our question: if I spend $2700 fixing my car I should get 21,000 miles before my next major fix, otherwise it is cheaper to be driving a different car.
