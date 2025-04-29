@@ -22,13 +22,13 @@ Developed using Pandas, Numpy, Selenium, and Plotly libraries
 This is how I see my car, shiny brand new with fine engineering and design:
 
  <p align="center">
-  <img src="./images/Active_Dose_plot.png" width = 600>
+  <img src="./images/car_isolder.jpeg" width = 600>
  </p>
 
 However, this is how everyone else sees my car, from 2010 with +200,000 miles and maybe a few dents:
 
  <p align="center">
-  <img src="./images/Active_Dose_plot.png" width = 600>
+  <img src="./images/car_isolder.jpeg" width = 600>
  </p>
 
 I drove every mile on this car and love it. I want to keep it as long as I can without making multiple particularly poor economic decisions.
