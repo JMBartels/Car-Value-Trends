@@ -2,9 +2,8 @@
 The Cost of a Mile - Trends in Car Devaluation
 </span>  
 
-Developed using Pandas, Numpy, Selenium, and Plotly libraries
-  <p>&nbsp;</p>
-No AI tools were used in the development and coding of this project
+Developed using Pandas, Numpy, Selenium, and Plotly libraries  
+No AI tools were used in the development and coding of this project  
 ## by Josh Bartels [@Linkedin](https://www.linkedin.com/in/joshua-bartels-756309138/)
 
 # Overview / Goals
