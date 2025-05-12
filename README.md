@@ -117,8 +117,14 @@ for n in range(len(fullname)):
 
 # **Transform/Clean Data:**
  
-- The next goal is to design a membrane that has a plateau between MED and MSC and a duration around 15 days.
-- Lets build an interactive simulation dashboard in Python with Plotly/Dash to explore designs intuitively with knobs that dynamically set our design variables.
+- See that each car has its own trend regardless of year
+- Lets visualize the effect of car year to see if there is deviation for older cars  
+
+<p align="center">
+ <img src="./images/DataByYear.png" width = 800>
+</p>
+
+We can see that as cars get older they remain on the same devaluation trend --> the year of the car is less important than the miles on it
 
  <p align="center">
   <!--<object data="filename.html" width="1600" height="3200"></object> -->
