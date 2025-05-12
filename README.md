@@ -111,14 +111,57 @@ for n in range(len(fullname)):
 
    <p>&nbsp;</p>  
 
+# **Transform/Clean Data:**
+
+We extracted the milage and prices as text from the webpage elements but still need to transform them to numbers for plotting:  
+
+```pyhton
+miles_num = []
+for item in miles_list:
+    temp_mile = []
+    for a in item:
+        if a.isdigit():
+            temp_mile.append(int(a))
+    mile = int("".join(map(str, temp_mile))) 
+    miles_num.append(mile)
+
+price_num = []
+for item in price_list:
+    temp_price = []
+    for a in item:
+        if a.isdigit():
+            temp_price.append(int(a))
+    if not temp_price:
+        price_num.append(None)
+    else:
+        price = int("".join(map(str, temp_price)))
+        price_num.append(price)
+```
+
+This lets us construct a plot of car devaluation by milage for each car model:
+
  <p align="center">
   <embed type="text/html" src="RawCarsData.html" width="800" height="800">
  </p>
 
-# **Transform/Clean Data:**
- 
 - See that each car has its own trend regardless of year
 - Lets visualize the effect of car year to see if there is deviation for older cars  
+
+First, if we look at the car name we can see that it contains the year, so we need to pull that out (leaving NaN spaces when we cannot find the year):  
+
+```python
+from dateutil.parser import parse
+
+year_nums = []
+for name in fixed_fullname:
+    try:
+        yr = parse(name, fuzzy=True).year
+    except:
+        yr = None
+    year_nums.append(yr)
+```
+
+This gives 
 
 <p align="center">
  <img src="./images/DataByYear.png" width = 800>
