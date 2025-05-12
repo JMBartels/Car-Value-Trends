@@ -186,7 +186,7 @@ We can see that as cars get older they remain on the same devaluation trend --> 
   
 
 # Wrap-up:
-We obtained a real-world answer to our question: if I spend <span style="color:blue">$2700</span> fixing my car I should get <span style="color:blue">21,000 miles</span> before my next major fix, otherwise it is cheaper to be driving a different car.
+We obtained a real-world answer to our question: if I <span style="color:red">spend $2700</span> fixing my car I should <span style="color:red">get 21,000 miles</span> before my next major fix, otherwise it is cheaper to be driving a different car.
 
 <p>&nbsp;</p>
 <span style="color:gray;font-size=8px">
