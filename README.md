@@ -164,7 +164,7 @@ for name in fixed_fullname:
 This gives 
 
 <p align="center">
- <img src="./images/DataByYear.png" width = 800>
+ <img src="./images/DataByYear.png" width = 1000>
 </p>
 
 We can see that as cars get older they remain on the same devaluation trend --> the year of the car is less important than the miles on it
