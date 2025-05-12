@@ -147,7 +147,7 @@ This lets us construct a plot of car devaluation by milage for each car model:
 - Lets visualize the effect of car year to see if there is deviation for older cars  
   
   
-First, if we look at the car name we can see that it contains the year (eg. "Certified <span style="color:red">2025</span> MAZDA MAZDA3 Carbon" from the example above), so we need to pull that out (leaving blanks when we cannot find the year):  
+First, if we look at the car name we can see that it contains the year (eg. "Certified <span style="color:blue">2025</span> MAZDA MAZDA3 Carbon" from the example above), so we need to pull that out (leaving blanks when we cannot find the year):  
 
 ```python
 from dateutil.parser import parse
