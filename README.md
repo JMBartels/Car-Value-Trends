@@ -115,7 +115,7 @@ for n in range(len(fullname)):
 
 We extracted the milage and prices as text from the webpage elements but still need to transform them to numbers for plotting:  
 
-```pyhton
+```python
 miles_num = []
 for item in miles_list:
     temp_mile = []
@@ -139,15 +139,14 @@ for item in price_list:
 ```
 
 This lets us construct a plot of car devaluation by milage for each car model:
-
  <p align="center">
   <embed type="text/html" src="RawCarsData.html" width="800" height="800">
  </p>
 
-- See that each car has its own trend regardless of year
+- See that each car has its own single trend, the value of the car appears to depend mostly on the milage
 - Lets visualize the effect of car year to see if there is deviation for older cars  
 
-First, if we look at the car name we can see that it contains the year, so we need to pull that out (leaving NaN spaces when we cannot find the year):  
+First, if we look at the car name we can see that it contains the year (eg. "Certified <span style="color:red">2025</span> MAZDA MAZDA3 Carbon" from example car), so we need to pull that out (leaving blanks when we cannot find the year):  
 
 ```python
 from dateutil.parser import parse
