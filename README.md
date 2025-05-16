@@ -22,7 +22,7 @@ No AI tools were used in the development and coding of this project
 This is how I see my car, shiny brand new with fine engineering and design:
 
  <p align="center">
-  <img src="./images/car_isolder.jpg" width = 600>
+  <img src="./images/Newcar.png" width = 600>
  </p>
 
 However, this is how everyone else sees my car, from 2010 with +200,000 miles and maybe a few dents:
