@@ -174,15 +174,9 @@ We can see that as cars get older they remain on the same devaluation trend --> 
   <embed type="text/html" src="Milestogo.html" width="800" height="800">
  </p>
   
-- Follow the link to run the interactive web-deployed app on Render or use the github repo to run it on your machine.
-[Link to Full Dash App Deployed on Render](https://delayed-drug-release-app.onrender.com){:target="_blank"}
+- Text.
+[Link to my other project modeling a scientific system with ML](https://jmbartels.github.io/Delayed-Drug-Release/){:target="_blank"}
 
- <p align="center">
-  <img src="./images/example_plot2.png" style="width: 400px; border:1px solid #ddd;">
- </p>
-
-<span style="color:red"> NOTE: the Render server is slow and will take a minute or two to load and 10-15 seconds to recalculate after you turn a knob, please be patient! </span> 
-  <p>&nbsp;</p>
   
 
 # Wrap-up:
