@@ -6,7 +6,7 @@ Developed using Pandas, Numpy, Selenium, and Plotly libraries\
 No AI tools were used in the development and coding of this project  
 ## by Josh Bartels [@Linkedin](https://www.linkedin.com/in/joshua-bartels-756309138/)
 
-# Overview / Goals
+# **Overview / Goals**
 - Extract: Build an API to extract real world car prices and mileage
 - Transform: Clean the data to be ready for batch plotting and analysis
 - Load: Store data in a central location that can easily be updated
@@ -35,9 +35,6 @@ I drove every mile on this car and love it. I want to keep it as long as I can w
 This raises a real problem, I don't know how much it is *worth* to repair. The first thought is to compare the market price of the car to the cost of a fix, but this suggests it is rarely ever worth fixing.
 The car still *has* to have value since it gets me from place to place (the role of a car). Instead of defining the value by the price of the car, lets define it as the number of miles.  
 <span style="color:blue">So then our question becomes: How much is a mile worth on a Mazda3?</span>
- 
-### **Approach**
-> Build and API to search and retrieve data from Autotrader
     
 # **Extracting Data:**  
 To make an informed decision I need real data to compare costs. We will scrape information from Autotrader in the Boston area using Selenium in Python to control Chrome:
@@ -109,7 +106,7 @@ for n in range(len(fullname)):
     fullname_list.append(fullname[n].text)
 ```
 
-  This loads in the entire search page and grabs our desired 3 elements for each listing and saves them in lists.  We will later load these lists to a Pandas Dataframe.
+  This loads in the entire search page for our criteria and grabs our desired 3 elements for each listing and saves them in lists.  We will later load these lists to a Pandas Dataframe.
 
    <p>&nbsp;</p>  
 
