@@ -174,7 +174,7 @@ We can see that as cars get older they remain on the same devaluation trend --> 
   <embed type="text/html" src="Milestogo.html" width="800" height="800">
  </p>
   
-- Text.
+- Text.  
 [Link to my other project modeling a scientific system with ML](https://jmbartels.github.io/Delayed-Drug-Release/){:target="_blank"}
 
   
