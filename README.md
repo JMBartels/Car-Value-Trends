@@ -35,7 +35,7 @@ I drove every mile on this car and love it. I want to keep it as long as I can w
 This raises a real problem, I don't know how much it is *worth* to repair. The first thought is to compare the market price of the car to the cost of a fix, but this suggests it is rarely ever worth fixing.
 The car still *has* to have value since it gets me from place to place (the role of a car). Instead of defining the value by the price of the car, lets define it as the number of miles. So then our question becomes: <span style="color:blue">How much is a mile worth on a Mazda3?</span>
     
-# **Extracting Data:**  
+# **Extract Data:**  
 To make an informed decision I need real data to compare costs. We will scrape information from Autotrader in the Boston area using Selenium in Python to control Chrome:
 
  <p align="center">
@@ -136,7 +136,7 @@ for item in price_list:
         price_num.append(price)
 ```
 
-This lets us construct a plot of car devaluation by milage for each car model:
+This lets us construct an interactive plot of car devaluation by milage for each car model using Plotly:
  <p align="center">
   <embed type="text/html" src="RawCarsData.html" width="800" height="800">
  </p>
@@ -165,20 +165,25 @@ This gives
  <img src="./images/DataByYear.png" width = 1000>
 </p>
 
-We can see that as cars get older they remain on the same devaluation trend --> the year of the car is less important than the miles on it
+We can see that as cars get older they remain on the same devaluation trend --> the year of the car is less important than the miles on it. This lets our analysis be year-agnostic.
+
+# **Analyze Data:**
+
+By fitting each plot we get the cost of a mile for each model we reserached (which is conveniently linear, so it is independent of current milage).  These values are used to construct another interactive plot in Plotly that shows how many miles the car will need to travel to justify the cost of the input fix cost. Different models have different devaluation trends resulting in a distribution of miles-to-go across models.
 
  <p align="center">
   <!--<object data="filename.html" width="1600" height="3200"></object> -->
   <embed type="text/html" src="Milestogo.html" width="800" height="800">
  </p>
-  
-- Text.  
-[Link to my other project modeling a scientific system with ML](https://jmbartels.github.io/Delayed-Drug-Release/){:target="_blank"}
-
-  
 
 # Wrap-up:
-We obtained a real-world answer to our question: if I <span style="color:red">spend $2700</span> fixing my car I should <span style="color:red">get 21,000 miles</span> before my next major fix, otherwise it is cheaper to be driving a different car.
+We built and analyzed a database of real-world data to answer to our question: if I <span style="color:red">spend $2700</span> fixing my car I should <span style="color:red">get 21,000 miles</span> before my next major fix, otherwise it is cheaper to be driving a different car.
+
+- if you enjoyed this project and want to check out more of my work come on over to [my other project modeling a scientific system with ML (Link)](https://jmbartels.github.io/Delayed-Drug-Release/){:target="_blank"}
+
+  
+
+
 
 <p>&nbsp;</p>
 <span style="color:gray;font-size=8px">
