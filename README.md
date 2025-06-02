@@ -2,15 +2,15 @@
 The Cost of a Mile - Trends in Car Devaluation
 </span>  
 
-==Developed using Pandas==, Numpy, Selenium, and Plotly libraries\
+Developed using Pandas, Numpy, Selenium, and Plotly libraries\
 No AI tools were used in the development and coding of this project  
-## by Josh Bartels [@Linkedin](https://www.linkedin.com/in/joshua-bartels-756309138/)
+## by Josh Bartels [@Linkedin](https://www.linkedin.com/in/joshua-bartels-756309138/){:target="_blank"}
 
 # **Overview / Goals**
-- Extract: Build an API to extract real world car prices and mileage
-- Transform: Clean the data to be ready for batch plotting and analysis
-- Load: Store data in a central location that can easily be updated
-- Analyze: Model the data to answer our guiding questions 
+- **Extract**: Build an API to extract real world car prices and mileage
+- **Transform**: Clean the data to be ready for batch plotting and analysis
+- **Load**: Store data in a central location that can easily be updated
+- **Analyze**: Model the data to answer our guiding questions 
 
 ### **Questions:**  
 > - How much should I spend to fix my old car?
@@ -24,7 +24,8 @@ This is how I see my car, shiny brand new with fine engineering and design:
  <p align="center">
   <img src="./images/Newcar.png" width = 600>
  </p>
-
+  
+  
 However, this is how everyone else sees my car, from 2010 with +200,000 miles and maybe a few dents:
 
  <p align="center">
