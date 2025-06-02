@@ -32,7 +32,7 @@ However, this is how everyone else sees my car, from 2010 with +200,000 miles an
  </p>
 
 I drove every mile on this car and love it. I want to keep it as long as I can without making multiple particularly poor economic decisions.
-This raises a real problem, I don't know how much it is *worth* to repair. The first thought is to compare the market price of the car to the cost of a fix, but this suggests it is rarely ever worth fixing.
+This raises a real problem, <span style="color:blue">I don't know how much it is *worth* to repair</span>. The first thought is to compare the market price of the car to the cost of a fix, but this suggests it is rarely ever worth fixing.
 The car still *has* to have value since it gets me from place to place (the role of a car). Instead of defining the value by the price of the car, lets define it as the number of miles. So then our question becomes: <span style="color:blue">How much is a mile worth on a Mazda3?</span>
     
 # **Extract Data:**  
@@ -145,7 +145,7 @@ This lets us construct an interactive plot of car devaluation by milage for each
 - Lets visualize the effect of car year to see if there is deviation for older cars  
   
   
-First, if we look at the car name we can see that it contains the year (eg. "Certified <span style="color:blue">2025</span> MAZDA MAZDA3 Carbon" from the example above), so we need to pull that out (leaving blanks when we cannot find the year):  
+First, if we look at the car name we can see that it contains the year (eg. <span style="color:red">"Certified</span> <span style="color:blue">2025</span> <span style="color:red">MAZDA MAZDA3 Carbon"</span> from the example above), so we need to pull that out (leaving blanks when we cannot find the year):  
 
 ```python
 from dateutil.parser import parse
