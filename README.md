@@ -160,7 +160,7 @@ for name in fixed_fullname:
     year_nums.append(yr)
 ```
 
-This gives 
+This allows us to make a dataframe with our cleaned-up data and start plotting: 
 
 <p align="center">
  <img src="./images/DataByYear.png" width = 1000>
@@ -170,7 +170,7 @@ Or you can explore this the relationship between Price, Milage, and Year with an
 
  <p align="center">
   <!--<object data="filename.html" width="1600" height="3200"></object> -->
-  <embed type="text/html" src="testplot3d.html" width="800" height="800">
+  <embed type="text/html" src="testplot3d.html" width="800" height="700">
  </p>
 
 We can see that as cars get older they remain on the same devaluation trend --> the year of the car is less important than the miles on it. This lets our analysis be year-agnostic.
