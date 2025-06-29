@@ -37,16 +37,16 @@ This raises a real problem, <span style="color:blue">I don't know how much it is
 The car still *has* to have value since it gets me from place to place (the role of a car). Instead of defining the value by the price of the car, lets define it as the number of miles. So then our question becomes: <span style="color:blue">How much is a mile worth on a Mazda3?</span>
     
 # **Extract Data:**  
-To make an informed decision I need real data to compare costs. We will scrape information from Autotrader in the Boston area using Selenium in Python to control Chrome:
+To make an informed decision I need real data to compare costs. We will scrape information from Autotrader in the Boston area using Selenium in Python to control Chrome. See Autotrader's listings format, with the key info highlighted in red:
 
  <p align="center">
   <img src="./images/Mazda3Listings.PNG" width = 500>
  </p>
  
-   There are a few key parts of this code: 
-   1. Understanding the syntax for an Autotrader URL --> how to execute a search
-   1. Get the page to load in all the data using page navigation (get around "infinite scrolling")
-   1. Get component information from each listing (Price, Miles, Listing Name)
+   There are a few key interactions with the webpage we need to build: 
+   1. Execute the search --> Understanding the syntax for an Autotrader URL
+   1. Get around "infinite scrolling" to load in all the data using page navigation
+   1. Retrieve component information from each listing (Price, Miles, Listing Name)
 
 ```python
 import pandas as pd
@@ -112,7 +112,7 @@ for n in range(len(fullname)):
 
 # **Transform/Clean Data:**
 
-We extracted the milage and prices as text from the webpage elements but still need to transform them to numbers for plotting:  
+We extracted the mileage and prices as text from the webpage elements but still need to transform them to numbers for plotting:  
 
 ```python
 miles_num = []
@@ -137,12 +137,12 @@ for item in price_list:
         price_num.append(price)
 ```
 
-This lets us construct an interactive plot of car devaluation by milage for each car model using Plotly:
+This lets us construct an interactive plot of car devaluation by mileage for each car model using Plotly:
  <p align="center">
   <embed type="text/html" src="RawCarsData.html" width="800" height="800">
  </p>
 
-- See that each car has its own single trend, the value of the car appears to depend mostly on the milage
+- See that each car has its own single trend, the value of the car appears to depend mostly on the mileage
 - Lets visualize the effect of car year to see if there is deviation for older cars  
   
   
@@ -166,7 +166,7 @@ This allows us to make a dataframe with our cleaned-up data and start plotting:
  <img src="./images/DataByYear.png" width = 1000>
 </p>
 
-Or you can explore this the relationship between Price, Milage, and Year with an interactive 3D plot:
+Or you can explore this the relationship between Price, Mileage, and Year with an interactive 3D plot:
 
  <p align="center">
   <!--<object data="filename.html" width="1600" height="3200"></object> -->
@@ -177,7 +177,7 @@ We can see that as cars get older they remain on the same devaluation trend --> 
 
 # **Analyze Data:**
 
-By fitting each plot we get the cost of a mile for each model we reserached (which is conveniently linear, so it is independent of current milage).  These values are used to construct another interactive plot in Plotly that shows how many miles the car will need to travel to justify the cost of the input fix cost. Different models have different devaluation trends resulting in a distribution of miles-to-go across models.
+By fitting each plot we get the cost of a mile for each model we reserached (which is conveniently linear, so it is independent of current mileage).  These values are used to construct another interactive plot in Plotly that shows how many miles the car will need to travel to justify the cost of the input fix cost. Different models have different devaluation trends resulting in a distribution of miles-to-go across models.
 
  <p align="center">
   <!--<object data="filename.html" width="1600" height="3200"></object> -->
